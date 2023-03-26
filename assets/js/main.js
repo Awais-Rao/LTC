@@ -1,0 +1,32 @@
+const sideBar = document.getElementById('sub_navbar');
+const sideBar_button = window.getComputedStyle(sideBar, '::after');
+
+
+
+sideBar.addEventListener('click', function(){
+    let visible =  this.classList.contains('show_sub_navbar');
+    if(!visible) {
+        sideBar.classList.add('show_sub_navbar');
+        // sideBar_button.style.transform = "rotate(180deg)";
+    } else{
+        sideBar.classList.remove('show_sub_navbar');
+    } 
+})
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    window.addEventListener('scroll', function () {
+
+        if (window.scrollY > 200) {
+            document.getElementById('navbar_top').classList.add('fixed-top', 'shadow');
+            // add padding top to show content behind navbar
+            navbar_height = document.querySelector('.navbar').offsetHeight;
+            document.body.style.paddingTop = navbar_height + 'px';
+        } else {
+            document.getElementById('navbar_top').classList.remove('fixed-top', 'shadow');
+            // remove padding top from body
+            document.body.style.paddingTop = '0';
+        }
+    });
+});
+// DOMContentLoaded  end

@@ -1,0 +1,402 @@
+/*==================== GOOGLE FONTS ====================*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+@font-face {
+  font-family: MP-regular;
+  src: url("fonts/MYRIADPRO-REGULAR.woff");
+}
+
+@font-face {
+  font-family: MP-bold;
+  src: url("fonts/MYRIADPRO-BOLD.woff");
+}
+
+@font-face {
+  font-family: MP-semiBold;
+  src: url("fonts/MYRIADPRO-SEMIBOLD.woff");
+}
+
+@font-face {
+  font-family: Helvatica;
+  src: url("fonts/HelveticaNeueLTStd-MdCn.otf");
+}
+
+/*==================== VARIABLES CSS ====================*/
+:root {
+
+
+  /*========== Colors ==========*/
+
+  --dark-green: #006738;
+  --light-green: #8cc63e;
+  --paragraph-color: #58585b;
+  --dark-paragraph-color: #221f1f;
+
+
+  /*========== Font and typography ==========*/
+  --navbar-font: 20px;
+  --title-font: 50px;
+  --subtitle-font: 28px;
+  --title-alt-font: 39px;
+  --subtitle-alt-font: 31px;
+  --heading-font: 23px;
+  --subheading-font: 21px;
+  --description-font: 16px;
+  --samll-font: 15px;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+
+
+/*========== Variables Dark theme ==========*/
+
+
+/*========== Button Dark/Light ==========*/
+
+
+/*==================== BASE ====================*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--paragraph-color);
+  font-family: MP-regular;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*==================== REUSABLE CSS CLASSES ====================*/
+.section {
+  padding: 2rem 0 4rem;
+}
+
+.section__title {
+  font-size: var(--title-font);
+  color: var(--dark-green);
+}
+
+.section__subtitle {
+  font-size: var(--subtitle-font);
+}
+
+.section__title,
+.section__subtitle {
+  text-align: center;
+}
+
+/*==================== LAYOUT ====================*/
+
+/*==================== HEADER ====================*/
+.header {
+  height: max-content;
+  background-image: url("../images/LTC-Slicing-03.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.header_img {
+  visibility: hidden;
+}
+
+/*==================== NAV ====================*/
+.navbar-toggler {
+  color: transparent !important;
+  outline: none;
+  border: 0px transparent !important;
+}
+
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.fixed-top {
+  visibility: visible !important;
+    top: -30px ;
+    transform: translateY(30px);
+    transition: transform .7s;
+}
+.temporary_navbar{
+  visibility: hidden;
+  background-color: var(--dark-green);
+  height: 80px;
+  opacity: 90%;
+  display: flex;
+  align-items: center;
+}
+.temporary_navbar_img{
+  width: 80%;
+}
+.temporary-navbar-toggler{
+  padding: 0% ;
+}
+.temporary-navbar-toggler-icon{
+  
+
+}
+
+.navbar {
+  background-color: var(--dark-green);
+  opacity: 90%;
+  overflow: hidden;
+  min-height: 116px;
+  position: relative;
+}
+
+.offcanvas {
+  background-color: var(--dark-green);
+  min-width: 80% !important;
+}
+.offcanvas.show:not(.hiding), 
+.offcanvas.showing {
+  max-width: 85% !important;
+}
+
+.close_button {
+  background-color: #fff;
+}
+
+.navbar-nav {
+  transform: translateY(33px);
+}
+
+.nav-item {
+  position: relative;
+  padding: 1.5px 10px;
+  margin: 0px 15px;
+  font-size: var(--navbar-font);
+  letter-spacing: 0.4px;
+  font-family: MP-semiBold;
+  overflow: hidden;
+  text-align: center;
+}
+
+.nav-link,
+.nav-link:focus,
+.nav-link:hover {
+  color: #fff;
+}
+
+.nav-item::after {
+  content: '';
+  background-color: var(--light-green);
+  height: 1000px;
+  width: 1000%;
+  position: absolute;
+  z-index: -1;
+  transition: 0.3s ease-in-out;
+  transform: translateY(-3px);
+  left: 0;
+}
+
+.nav-item:hover.nav-item::after {
+  transform: translateY(-100px);
+}
+
+.sub_navbar {
+  position: absolute !important;
+  right: 5%;
+  top: 13%;
+}
+
+.sub_navbar-nav {
+  display: flex;
+  background-color: #bac21c80;
+  height: 40px !important;
+}
+
+.sub_nav-item {
+  padding: 12px 10px;
+  color: #fff;
+  text-align: center;
+  font-size: 13px;
+  font-family: MP-regular;
+  letter-spacing: 1px;
+  transform: translateX(-15px);
+}
+
+.sub_nav-link {
+  color: #fff;
+}
+
+.search_button {
+  position: absolute;
+  top: 19%;
+  right: 2%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 20px;
+}
+
+
+
+
+
+
+
+@media screen and (max-width:1200px) {
+  .navbar_img {
+    width: 80%;
+  }
+  .close_button{
+    display: none;
+  }
+  .navbar {
+    min-height: fit-content;
+  }
+
+  .navbar-nav {
+    transform: translateY(50px);
+    margin-bottom: 20px;
+  }
+
+  .nav-item {
+    padding: 10px 0px;
+    margin: 10px 0px;
+  }
+
+  .nav-item::after {
+    transform: translateY(-100px);
+    left: -98%;
+    width: 100% !important;
+  }
+
+  .nav-item:hover.nav-item::after {
+    left: 0%;
+    transform: translateY(-100px);
+  }
+
+  .search_button {
+    display: none;
+  }
+
+  .sub_navbar {
+    position: fixed !important;
+    right: -113px;
+    top: 50%;
+    width: 120px;
+    transition: 0.3s ease-in-out;
+  }
+
+  .show_sub_navbar {
+    right: 0%;
+  }
+
+  .sub_navbar-nav {
+    display: block;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    height: max-content !important;
+    background-color: var(--dark-green);
+    position: relative;
+  }
+
+  .sub_navbar-nav::after {
+    content: "\f104";
+    font-family: fontAwesome;
+    font-size: 16px;
+    color: #fff;
+    height: 30px;
+    width: 30px;
+    background-color: var(--dark-green);
+    position: absolute;
+    top: 45%;
+    left: -20px;
+    padding-left: 10px;
+    padding-top: 2px;
+    border-radius: 15px;
+  }
+
+  .sub_nav-item {
+    padding: 12px 0px;
+    transform: translateX(-6px);
+  }
+}
+
+/* show menu */
+
+
+/* Active link */
+
+
+/* Change background header */
+
+
+/*==================== HOME ====================*/
+
+
+/*==================== BUTTONS ====================*/
+
+
+/*==================== ABOUT ====================*/
+
+
+/*==================== SKILLS ====================*/
+
+
+/*==================== QUALIFICATION ====================*/
+
+
+/*==================== SERVICES ====================*/
+
+
+/* Active Modal */
+
+
+/*==================== PORTFOLIO ====================*/
+
+
+/*==================== PROJECT IN MIND ====================*/
+
+
+/*==================== TESTIMONIAL ====================*/
+
+
+/*==================== CONTACT ME ====================*/
+
+
+/*==================== FOOTER ====================*/
+
+
+/*========== SCROLL UP ==========*/
+
+
+/* Show scroll */
+
+
+/*========== SCROLL BAR ==========*/
+
+
+/*==================== MEDIA QUERIES ====================*/
+/* For small devices */
+
+
+/* For medium devices */
+
+
+/* For large devices */
+@media screen and (max-width:992px) {}
