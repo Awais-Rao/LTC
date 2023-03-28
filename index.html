@@ -8,9 +8,6 @@
   <!-- ================ FONT AWESOME ================= -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet" />
 
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" rel="stylesheet" />
-
-
   <!--==================== BOOTSTRAP CSS ====================-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
@@ -27,7 +24,7 @@
   <header class="header" id="header">
     <!--==================== NEVBAR ====================-->
 
-    <nav class="navbar navbar-expand-xl px-xl-3">
+    <nav class="navbar navbar-expand-xl px-xl-3 fixed-top" id="navbar_top">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
           <img src="assets/images/Logo.png" class="img-fluid navbar_img" alt="">
@@ -47,22 +44,34 @@
           <div class="offcanvas-body">
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 ms-auto pe-xl-5 ">
               <li class="nav-item">
-                <a class="nav-link " aria-current="page" href="#">About Us</a>
+                <a class="nav-link " aria-current="page" href="#about" data-dismiss="offcanvas">About Us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">How We Support</a>
+                <a class="nav-link" href="#support">How We Support</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Public Information</a>
+                <a class="nav-link" href="#team">Public Information</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">News & Events</a>
+              </li>
+              <li class="nav-item dropdown d-xl-none d-block">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  More
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Careers</a></li>
+                  <li><a class="dropdown-item" href="#">Tenders</a></li>
+                  <li><a class="dropdown-item" href="#">Locate Us</a></li>
+                  <li><a class="dropdown-item" href="#">Useful Links</a></li>
+                </ul>
               </li>
             </ul>
           </div>
         </div>
 
-        <div class="sub_navbar" id="sub_navbar">
+        <div class="sub_navbar d-xl-block d-none" id="sub_navbar">
           <ul class="sub_navbar-nav">
             <li class="sub_nav-item ">
               <a class="sub_nav-link " href="#">Careers</a>
@@ -79,20 +88,11 @@
           </ul>
         </div>
 
-        <button class="search_button"><i class="fa-solid fa-magnifying-glass search_icon"></i></button>
+        <button class="search_button"><i
+            class="fa-solid fa-magnifying-glass search_icon d-xl-block d-none"></i></button>
 
       </div>
     </nav>
-
-    <div class="temporary_navbar container-fluid px-3" id="navbar_top">
-      <a class="navbar-brand" href="#">
-        <img src="assets/images/Logo.png" class="img-fluid temporary_navbar_img " alt="">
-      </a>
-      <button class="navbar-toggler temporary-navbar-toggler custom-toggler ms-auto me-3" type="button" data-bs-toggle="offcanvas"
-        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-        <span class="navbar-toggler-icon temporary-navbar-toggler-icon "></span>
-      </button>
-    </div>
 
     <img class="w-100 header_img " src="assets/images/LTC-Slicing-03.jpg" alt="">
   </header>
@@ -100,23 +100,405 @@
   <!--==================== MAIN ====================-->
   <main class="main">
     <!--==================== HOME ====================-->
-    <section class="home section" id="home">
-
-    </section>
-
-    <!--==================== ABOUT ====================-->
     <section class="about section" id="about">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xl-5 col-lg-6 col-md-6 col-12">
+            <div class="container-fluid">
+              <p class="about_para">
+                Lahore Transport Company (LTC) has been established under the provisions of Provincial Motor Vehicles
+                Ordinance 1965 as an Urban Transport Company in April, 2009 by the Government of the Punjab. LTC has
+                been registered under section 42 of the Companies Ordinance 1984, repealed with Companies Act 2017 in
+                the province of Punjab, with the Registrar Joint Stock Companies, Lahore.
+                <br>
+              </p>
+              <p class="about_para">
+                LTC is primarily a regulatory body which has been tasked to ensure a smooth running transport system in
+                Lahore which will provide the commuters a safe, efficient and affordable trans- port service.
+              </p>
+              <button class="btn light_outline_btn px-4 about_btn">Read More</button>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-6 col-md-6 col-12 about_img_wrapper">
+            <div class="container-fluid about_img_wrapper ">
+              <img src="assets/images/about-Company.png" alt="" class="img-fluid about_img p-2">
+            </div>
+          </div>
+          <div class="col-xl-4 col-12 about_img_wrapper ">
+            <a href="https://youtu.be/4HN0ceaIMV8?t=3" target="_blank">
+              <div class="container-fluid p-0 bus_img_wrapper">
+                <img src="assets/images/LTC-Slicing-04.jpg" alt="" class="img-fluid w-100 ">
+                <img src="assets/images/Youtube-Button.png" alt="" class="img-fluid youtube_button">
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
 
     </section>
 
-    <!--==================== SKILLS ====================-->
-    <section class="skills section" id="skills">
+    <!--==================== SUPPORT ====================-->
+    <section class="support section" id="support">
+      <div class="container-fluid support_wrapper">
+        <div class="row">
+          <div class="col-xl-4 col-6  support_portion support_img_div">
+            <img src="assets/images/How-wo-support.png" class="support_portion_img support_img img-fluid" alt="">
+          </div>
+          <div class="col-xl-4 col-6 support_portion">
+            <img src="assets/images/LTC-Slicing-05.jpg" class="support_portion_img img-fluid" alt="">
+            <div class="support_portion_data">
+              <img src="assets/images/1.png" class="support_portion_icon" alt="">
+              <p class="support_portion_heading">
+                Public Transport<br>Planning / Operation
+              </p>
+              <button class="support_portion_button btn px-xl-4 px-lg-4 px-md-3 px-sm-2 px-1 py-2">
+                Find out More
+                <!-- <i class="fa-solid fa-arrow-right right_arrow"></i> -->
+              </button>
+            </div>
+          </div>
+          <div class="col-xl-4 col-6 support_portion">
+            <img src="assets/images/LTC-Slicing-06.jpg" class="support_portion_img img-fluid" alt="">
+            <div class="support_portion_data">
+              <img src="assets/images/2.png" class="support_portion_icon" alt="">
+              <p class="support_portion_heading">
+                Public Transport<br>Infrastructure
+              </p>
+              <button class="support_portion_button btn px-xl-4 px-lg-4 px-md-3 px-sm-2 px-1 py-2">
+                Find out More
+                <!-- <i class="fa-solid fa-arrow-right right_arrow"></i> -->
+              </button>
+            </div>
+          </div>
+          <div class="col-xl-4 col-6 support_portion">
+            <img src="assets/images/LTC-Slicing-07.jpg" class="support_portion_img img-fluid" alt="">
+            <div class="support_portion_data">
+              <img src="assets/images/3.png" class="support_portion_icon" alt="">
+              <p class="support_portion_heading">
+                Route Permit Issuance
+              </p>
+              <button class="support_portion_button btn px-xl-4 px-lg-4 px-md-3 px-sm-2 px-1 py-2">
+                Find out More
+                <!-- <i class="fa-solid fa-arrow-right right_arrow"></i> -->
+              </button>
+            </div>
+          </div>
+          <div class="col-xl-4 col-6 support_portion">
+            <img src="assets/images/LTC-Slicing-08.jpg" class="support_portion_img img-fluid" alt="">
+            <div class="support_portion_data">
+              <img src="assets/images/4.png" class="support_portion_icon" alt="">
+              <p class="support_portion_heading">
+                Transport enforcement
+              </p>
+              <button class="support_portion_button btn px-xl-4 px-lg-4 px-md-3 px-sm-2 px-1 py-2">
+                Find out More
+                <!-- <i class="fa-solid fa-arrow-right right_arrow"></i> -->
+              </button>
+            </div>
+          </div>
+          <div class="col-xl-4 col-6 support_portion">
+            <img src="assets/images/LTC-Slicing-09.jpg" class="support_portion_img img-fluid" alt="">
+            <div class="support_portion_data">
+              <img src="assets/images/5.png" class="support_portion_icon" alt="">
+              <p class="support_portion_heading">
+                training Programe<br>for public transport
+              </p>
+              <button class="support_portion_button btn px-xl-4 px-lg-4 px-md-3 px-sm-2 px-1 py-2">
+                Find out More
+                <!-- <i class="fa-solid fa-arrow-right right_arrow"></i> -->
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
 
     </section>
 
-    <!--==================== QUALIFICATION ====================-->
-    <section class="qualification section">
+    <!--==================== HEIGHLIGHT ====================-->
+    <section class="highlight section" id="highlight">
+      <div class="container-fluid">
+        <div class="section_title_wrapper">
+          <p class="section_title">Highlights</p>
+        </div>
+        <div class="section_subtitle_wrapper">
+          <p class="section_subtitle">What's new</p>
+        </div>
 
+        <div class="container-fluid highlight_slider p-0">
+
+          <div id="carouselExampleRide" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
+            <div class="carousel-inner">
+
+              <div class="carousel-item container-fluid active">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="container-fluid">
+                      <div class="row">
+                        <div class="col-3">
+                          <div class="container-fluid highlight_slider_calander ">
+                            <p class="calander_date mb-0">29</p>
+                            <p class="calander_year ">2018</p>
+                            <p class="calander_month ">August</p>
+                          </div>
+                        </div>
+                        <div class="col-9">
+                          <div class="highlight_slider_data pe-4">
+                            <p class="slider_heading ">CEO, LTC Received Certificate From ICMA Pakistan</p>
+                            <p class="slider_description">
+                              Institute of Cost & Management Accountants of Pakistan has appreciated the dynamic Ms.
+                              Mariam
+                              Khawar Chief Executive Officer of Lahore Transport Company by awarding the.....
+                            </p>
+                            <button class="btn light_outline_btn px-4 about_btn highlight_slider_btn ">Read More
+                              &ensp;<i class="fa-solid fa-arrow-right right_arrow"></i> </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="container-fluid">
+                      <div class="row">
+                        <div class="col-3">
+                          <div class="container-fluid highlight_slider_calander ">
+                            <p class="calander_date mb-0">06</p>
+                            <p class="calander_year ">2018</p>
+                            <p class="calander_month ">September</p>
+                          </div>
+                        </div>
+                        <div class="col-9">
+                          <div class="highlight_slider_data pe-4">
+                            <p class="slider_heading ">Commemoration ceremony of Pakistan Defence Day</p>
+                            <p class="slider_description">
+                              Institute of Cost & Management Accountants of Pakistan has appreciated the dynamic Ms.
+                              Mariam
+                              Khawar Chief Executive Officer of Lahore Transport Company by awarding the.....
+                            </p>
+                            <button class="btn light_outline_btn px-4 about_btn highlight_slider_btn ">Read More
+                              &ensp;<i class="fa-solid fa-arrow-right right_arrow"></i> </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="carousel-item container-fluid ">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="container-fluid">
+                      <div class="row">
+                        <div class="col-3">
+                          <div class="container-fluid highlight_slider_calander ">
+                            <p class="calander_date mb-0">29</p>
+                            <p class="calander_year ">2018</p>
+                            <p class="calander_month ">August</p>
+                          </div>
+                        </div>
+                        <div class="col-9">
+                          <div class="highlight_slider_data pe-4">
+                            <p class="slider_heading ">CEO, LTC Received Certificate From ICMA Pakistan</p>
+                            <p class="slider_description">
+                              Institute of Cost & Management Accountants of Pakistan has appreciated the dynamic Ms.
+                              Mariam
+                              Khawar Chief Executive Officer of Lahore Transport Company by awarding the.....
+                            </p>
+                            <button class="btn light_outline_btn px-4 about_btn highlight_slider_btn ">Read More
+                              &ensp;<i class="fa-solid fa-arrow-right right_arrow"></i> </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="container-fluid">
+                      <div class="row">
+                        <div class="col-3">
+                          <div class="container-fluid highlight_slider_calander ">
+                            <p class="calander_date mb-0">06</p>
+                            <p class="calander_year ">2018</p>
+                            <p class="calander_month ">September</p>
+                          </div>
+                        </div>
+                        <div class="col-9">
+                          <div class="highlight_slider_data pe-4">
+                            <p class="slider_heading ">Commemoration ceremony of Pakistan Defence Day</p>
+                            <p class="slider_description">
+                              Institute of Cost & Management Accountants of Pakistan has appreciated the dynamic Ms.
+                              Mariam
+                              Khawar Chief Executive Officer of Lahore Transport Company by awarding the.....
+                            </p>
+                            <button class="btn light_outline_btn px-4 about_btn highlight_slider_btn ">Read More
+                              &ensp;<i class="fa-solid fa-arrow-right right_arrow"></i> </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <div class="container-fluid highlight_slider_control_wrapper">
+
+          <button class="highlight_slider_control previous" type="button" data-bs-target="#carouselExampleRide"
+            data-bs-slide="prev">
+            <img src="assets/images/Arrow-left.png" class="img-fluid" alt="">
+            <span class="visually-hidden">Previous</span>
+          </button>
+
+          <img src="assets/images/Wheel.png" class="highlight_slider_control_wheel img-fluid" alt="">
+
+          <button class="highlight_slider_control next" type="button" data-bs-target="#carouselExampleRide"
+            data-bs-slide="next">
+            <img src="assets/images/Arrow-right.png" class="img-fluid" alt="">
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!--==================== TEAM ====================-->
+    <section class="team section" id="team">
+      <div class="container-fluid">
+        <div class="section_title_wrapper mb-5">
+          <p class="section_title">Core Team</p>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+
+            <div class="col-4 p-0 d-flex align-item-center">
+              <div class="container-fluid team_member_portion ">
+                <div class="row">
+                  <div class="col-6 team_member_wrapper_div" id="mariam-btn">
+                    <div class="team_member_wrapper">
+                      <img src="assets/images/LTC-Slicing-10.jpg" class="img-fluid" alt="">
+                      <p class="team_member_name">Ms. Mariam Khawar</p>
+                    </div>
+                  </div>
+                  <div class="col-6 team_member_wrapper_div" id="zafar-btn">
+                    <div class="team_member_wrapper">
+                      <img src="assets/images/LTC-Slicing-11.jpg" class="img-fluid" alt="">
+                      <p class="team_member_name">Mr. Zafar Ahmed Quraishi</p>
+                    </div>
+                  </div>
+                  <div class="col-6 team_member_wrapper_div" id="qayyum-btn">
+                    <div class="team_member_wrapper">
+                      <img src="assets/images/LTC-Slicing-12.jpg" class="img-fluid" alt="">
+                      <p class="team_member_name">Mr. Abdul Qayyum</p>
+                    </div>
+                  </div>
+                  <div class="col-6 team_member_wrapper_div" id="shafique-btn">
+                    <div class="team_member_wrapper">
+                      <img src="assets/images/LTC-Slicing-10.jpg" class="img-fluid" alt="">
+                      <p class="team_member_name">Mr. Shafique Ahmed</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-8 ps-xl-5 ps-lg-5">
+              <div class="container-fluid">
+
+                <!--------------- Mariam Khawar --------------->
+                <div class="team_member_card_wrapper mariam_active" data-content id="mariam">
+                  <img src="assets/images/LTC-Slicing-18.jpg" class="img-fluid w-50" alt="">
+                  <div class="team_member_card_data">
+                    <div class="team_member_card_data_inner">
+                      <div class="team_member_card_heading">Ms. Mariam Khawar</div>
+                      <div class="team_member_card_subheading">Chief Exacutive Officer</div>
+                      <div class="team_member_card_description">
+                        Mariam Khawar, Hafiz-e-Quran, who has attained M.Sc in Statistics from well reputed and known
+                        Government College University Lahore and she is also Fellow Cost & Management Accountant of
+                        Pakistan from ICMAP. She is currently performing her duties as Chief Executive Officer, prior
+                        appoint- ing CEO she has rendered her valuable services as Chief Financial Officer/Company
+                        Secretary....
+                      </div>
+                     <button class="team_member_card_button">
+                      <img src="assets/images/Arrow.png" class="team_member_card_arrow img-fluid" alt="">
+                     </button>
+                    </div>
+                  </div>
+                </div>
+                
+                <!--------------- Zafar Ahmed --------------->
+                <div class="team_member_card_wrapper zafar" data-content id="zafar">
+                  <img src="assets/images/LTC-Slicing-19.jpg" class="img-fluid w-50" alt="">
+                  <div class="team_member_card_data">
+                    <div class="team_member_card_data_inner">
+                      <div class="team_member_card_heading">Mr. Zafar Ahmed Quresh</div>
+                      <div class="team_member_card_subheading">Chief Exacutive Officer</div>
+                      <div class="team_member_card_description">
+                        Mariam Khawar, Hafiz-e-Quran, who has attained M.Sc in Statistics from well reputed and known
+                        Government College University Lahore and she is also Fellow Cost & Management Accountant of
+                        Pakistan from ICMAP. She is currently performing her duties as Chief Executive Officer, prior
+                        appoint- ing CEO she has rendered her valuable services as Chief Financial Officer/Company
+                        Secretary....
+                      </div>
+                     <button class="team_member_card_button">
+                      <img src="assets/images/Arrow.png" class="team_member_card_arrow img-fluid" alt="">
+                     </button>
+                    </div>
+                  </div>
+                </div>
+                
+                <!--------------- Abdul Qayyum --------------->
+                <div class="team_member_card_wrapper qayyum" data-content id="qayyum">
+                  <img src="assets/images/LTC-Slicing-20.jpg" class="img-fluid w-50" alt="">
+                  <div class="team_member_card_data">
+                    <div class="team_member_card_data_inner">
+                      <div class="team_member_card_heading">Mr. Abdul Qayyum</div>
+                      <div class="team_member_card_subheading">Chief Exacutive Officer</div>
+                      <div class="team_member_card_description">
+                        Mariam Khawar, Hafiz-e-Quran, who has attained M.Sc in Statistics from well reputed and known
+                        Government College University Lahore and she is also Fellow Cost & Management Accountant of
+                        Pakistan from ICMAP. She is currently performing her duties as Chief Executive Officer, prior
+                        appoint- ing CEO she has rendered her valuable services as Chief Financial Officer/Company
+                        Secretary....
+                      </div>
+                     <button class="team_member_card_button">
+                      <img src="assets/images/Arrow.png" class="team_member_card_arrow img-fluid" alt="">
+                     </button>
+                    </div>
+                  </div>
+                </div>
+                
+                <!--------------- Shafique Ahmed --------------->
+                <div class="team_member_card_wrapper shafique" data-content id="shafique">
+                  <img src="assets/images/LTC-Slicing-21.jpg" class="img-fluid w-50" alt="">
+                  <div class="team_member_card_data">
+                    <div class="team_member_card_data_inner">
+                      <div class="team_member_card_heading">Mr. Shafique Ahmed</div>
+                      <div class="team_member_card_subheading">Chief Exacutive Officer</div>
+                      <div class="team_member_card_description">
+                        Mariam Khawar, Hafiz-e-Quran, who has attained M.Sc in Statistics from well reputed and known
+                        Government College University Lahore and she is also Fellow Cost & Management Accountant of
+                        Pakistan from ICMAP. She is currently performing her duties as Chief Executive Officer, prior
+                        appoint- ing CEO she has rendered her valuable services as Chief Financial Officer/Company
+                        Secretary....
+                      </div>
+                     <button class="team_member_card_button">
+                      <img src="assets/images/Arrow.png" class="team_member_card_arrow img-fluid" alt="">
+                     </button>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!--==================== SERVICES ====================-->
