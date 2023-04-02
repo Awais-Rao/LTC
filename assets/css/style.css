@@ -34,15 +34,16 @@
 
 
   /*========== Font and typography ==========*/
-  --navbar-font: 20px;
-  --title-font: 70px;
-  --subtitle-font: 38px;
-  --title-alt-font: 39px;
-  --subtitle-alt-font: 31px;
-  --heading-font: 24px;
-  --subheading-font: 21px;
+  --navbar-font: 18px;
+  --title-font: 64px;
+  --subtitle-font: 35px;
+  --title-alt-font: 49px;
+  --subtitle-alt-font: 33px;
+  --attraction-title:51px;
+  --heading-font: 22px;
+  --subheading-font: 20px;
   --card-heading-font: 28px;
-  --card-subheading-font: 24px;
+  --card-subheading-font: 23px;
   --description-font: 16px;
   --paragraph-font:18px;
   --samll-font: 15px;
@@ -55,8 +56,13 @@
 }
 
 
-/*========== Variables Dark theme ==========*/
-
+/*========== Margines ==========*/
+  .margin-x-sm{height: 5vh;}
+  .margin-sm{height: 10vh;}
+  .margin-x-md{height: 15vh;}
+  .margin-md{height: 20vh;}
+  .margin-x-xl{height: 25vh;}
+  .margin-xl{height: 30vh;}
 
 /*========== Button Dark/Light ==========*/
 
@@ -100,7 +106,6 @@ img {
 /*==================== REUSABLE CSS CLASSES ====================*/
 .section {
   padding: 3rem 2rem 3rem;
-  margin-bottom: 1rem;
 }
 
 .section_title {
@@ -124,8 +129,6 @@ img {
   margin: 0;
   padding: 0;
 }
-
-/*==================== LAYOUT ====================*/
 
 /*==================== HEADER ====================*/
 .header {
@@ -155,7 +158,7 @@ img {
   background-color: var(--dark-green);
   opacity: 90%;
   overflow: hidden;
-  min-height: 116px;
+  /* min-height: 116px; */
 }
 
 .offcanvas {
@@ -173,7 +176,7 @@ img {
 }
 
 .navbar-nav {
-  transform: translateY(33px);
+  transform: translateY(31px);
 }
 
 .nav-item {
@@ -246,6 +249,33 @@ img {
   font-size: 20px;
 }
 
+
+.top-navbar{
+  position: fixed;
+  z-index: 9999999;
+  width: 100%;
+  top: 0;
+  transition: all 0.7s ease-in-out !important;
+}
+
+.top-navbar .sub_navbar,
+.top-navbar .search_button
+{
+  display: none !important;
+}
+.top-navbar .navbar-nav{
+  transform: translateY(12px) translateX(40px);
+}
+.top-navbar .navbar_img{
+  width: 50% !important;
+  padding: 0 !important;
+}
+.top-navbar{
+  min-height: fit-content !important;
+}
+.top-navbar .nav-item{
+  font-size: 17px;
+}
 
 
 
@@ -372,7 +402,7 @@ img {
 .support_portion_button,
 .support_portion_button:focus{
   position: absolute;
-  bottom: -8%;
+  bottom: -10%;
   right: 50%;
   transform: translateX(50%);
   background-color: var(--dark-green);
@@ -409,6 +439,7 @@ img {
 
  
 /*==================== HEIGHLIGHT ====================*/
+
 .highlight_slider{
   margin: 5rem 0;
 }
@@ -443,13 +474,14 @@ font-size: var(--slider-date-font);
   color: var(--dark-green);
   font-size: var(--heading-font);
   font-family: MP-semiBold;
+  line-height: 100%;
 }
 .slider_heading{
   margin-bottom: 0;
 }
 .slider_description{
-  line-height: var(--heading-font);
-  line-height: 145%;
+  font-size: var(--description-font);
+  line-height: 130%;
 }
 .highlight_slider_btn{
   border: 1.5px solid var(--light-green);
@@ -472,6 +504,7 @@ font-size: var(--slider-date-font);
 /*==================== TEAM ====================*/
 .team{
   background: url("../images/LTC-Slicing-22.jpg");
+  background-size: cover;
 }
 .team_member_portion{
   display: flex;
@@ -496,12 +529,18 @@ font-size: var(--slider-date-font);
   width: 300px;
   background-color: var(--light-green);
   opacity: 25%;
-  bottom: -300%;
+  bottom: -600%;
   left: 0;
-  transition: 0.7s ease-in-out;
+  transition: 0.4s ease-in;
 }
-.team_member_wrapper:hover.team_member_wrapper::before{
+
+        /* ----------------- background must not be lighten on hover -----------------------  */
+
+/* .team_member_wrapper:hover.team_member_wrapper::before{
   bottom: 0;
+} */
+.team{
+  margin-bottom: 0;
 }
 .team_member_name{
   width: 100%;
@@ -515,6 +554,10 @@ font-size: var(--slider-date-font);
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
+}
+
+.tabs-btns > .team_member_wrapper_div{
+  cursor: pointer;
 }
 .team_member_card_wrapper{
   position: relative;
@@ -544,10 +587,11 @@ font-size: var(--slider-date-font);
   padding: 10px 10px;
   font-size: var(--samll-font);
   line-height: 170%;
+  line-height: 150%;
 }
 .team_member_card_button{
   float: right;
-  transform: translate(17px,15px);
+  transform: translate(17px,16px);
   border: 0;
   outline: 0;
 }
@@ -576,30 +620,356 @@ font-size: var(--slider-date-font);
 .shafique_active[data-content]{
   display: block;
 }
+.active-btn .team_member_wrapper::before{
+  bottom: 0;
+}
 
-/*==================== QUALIFICATION ====================*/
+/*==================== NEWS ====================*/
+.news{
+  background-color: #f5f9fc;
+}
+.news_wrapper{
+  margin-top: 2rem;
+  position: relative;
+}
+.news_wrapper_div{
+  background-color: #fff;
+    /* display: flex;
+    align-items: stretch; */
+    /* flex-wrap: wrap; */
+}
+.news_wrapper_div:hover{
+  cursor: pointer;
+  -webkit-box-shadow: 9px 11px 30px -10px rgba(153,147,153,0.85);
+-moz-box-shadow: 9px 11px 30px -10px rgba(153,147,153,0.85);
+box-shadow: 9px 11px 30px -10px rgba(153,147,153,0.85);
+transition: all 0.4s;
+}
+.news_wrapper_div:hover .news_wrapper_img_div{
+  background-color: var(--dark-green);
+  transition: all 0.4s;
+}
+.news_img{
+  width: 65%;
+  transform: translateX(-25%);
+}
+.news_wrapper_img_div{
+  clip-path: polygon(0 0, 70% 0, 100% 100%, 0% 100%);
+  background-color: var(--light-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.news_wrapper_img_alt{
+  visibility: hidden;
+  position: absolute;
+  z-index: 2;
+  left: 16px;
+  height: 80%;
+}
+.news_wrapper_div:hover .news_wrapper_img_alt{
+  visibility: visible;
+}
+.news_wrapper_div:hover .news_wrapper_img{
+  visibility: hidden;
+}
+.news_card_date{
+  font-size: var(--navbar-font);
+  color: #009344;
+}
+.news_card_title{
+  font-size:var(--subheading-font);
+  color: var(--dark-green);
+  line-height: 100% !important; 
+}
+
+.dark_outline_btn,
+.dark_outline_btn:focus{
+  width: fit-content;
+  text-transform: uppercase;
+  border-radius: 0;
+  border: 2.5px var(--light-green) solid;
+  outline: none;
+  color: #fff;
+  background: var(--dark-green);
+  position: relative !important;
+  z-index: 1;
+  transition: all 1s;
+  overflow: hidden;
+}
+
+.dark_outline_btn:hover {
+  color: white;
+}
+.dark_outline_btn::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 0%;
+  top: 0;
+  left: -40px;
+  transform: skewX(45deg);
+  background-color: var(--light-green);
+  z-index: -1 ;
+  transition: all 1s;
+}
+.dark_outline_btn:hover::after {
+  width: 160% ;
+}
 
 
-/*==================== SERVICES ====================*/
+/*==================== TENDERS ====================*/
 
+.tenders{
+  background: url("../images/LTC-Slicing-23.jpg");
+  background-size: cover;
+}
+thead > tr > th{
+  padding: 20px 20px !important;
+  background-color: var(--light-green) !important;
+  border-top: 5px solid var(--dark-green);
+  color: var(--dark-green);
+  font-size: var(--navbar-font);
+  text-align: center;
+}
+.tender_table_tr > td{
+  background-color: #898b8d4D;
+  padding: 20px 20px !important;
+  font-size: var(--navbar-font);
+  color: #221f1f;
+  border: none !important;
+  border-right: 1.5px solid rgba(126, 125, 125, 0.664) !important;
+  border-bottom: 5px solid rgba(255, 255, 255, 0.5)!important; 
+}
+.no_border_tr > td{
+  border-bottom: none !important;
+}
+.tender_table_date{
+  text-align: center;
+}
+.tender_table_tr:hover{
+  background-color: #898b8d59;
+  cursor: grab;
+}
 
-/* Active Modal */
+/*==================== HELP ====================*/
+.help{
+  padding: 0;
+  background-color: var(--dark-green);
+}
+.help_img_wrapper{
+  clip-path: polygon(0 0, 76% 0, 100% 100%, 0% 100%);
+  background-color: #e5e9ec;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.help_img_container{
+  padding: 5rem 0rem;
+}
+.help_container{
+  padding: 5rem 3rem ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.help_data{
+  text-align: center;
+  transform: translateX(-50px);
+}
+.help_heading{
+  color: #fff;
+  font-family: MP-bold;
+  font-size: var(--title-alt-font);
+  text-transform: uppercase;
+}
+.help_subheading{
+  color: var(--light-green);
+  font-family: MP-semiBold;
+  font-size: var(--subtitle-alt-font);
+}
+.signin_button{
+  font-size: var(--navbar-font);
+  color: #fff;
+  text-transform: uppercase;
+  background-color: var(--light-green);
+  border: 1px solid var(--light-green);
+  outline: none;
+}
+.signin_text{
+  color: #fff;
+  font-family: sans-serif;
+  font-size: var(--samll-font);
+  font-weight: 100 !important;
+  font-style: italic;
+}
+.signup_button{
+  border: 1px solid #fff;
+  background-color: var(--dark-green);
+}
+.signup_button:hover{
+  background-color: white;
+  color: var(--dark-green);
+  transition: all 0.4s ease-in-out !important;
+}
+/*==================== TRIP PLANER ====================*/
 
+.trip{
+  padding: 3rem 0rem 1rem;
+}
+.route_wrapper,
+.location_wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.route_lable,
+.location_lable{
+  flex: 1;
+  color: #231f20;
+  font-size: var(--navbar-font);
+  margin-right: 15px;
+}
+.route_input,
+.location_input{
+  flex: 7;
+  background-color: #e6e7e8;
+  border: 0px;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+.route_input:focus,
+.location_input:focus{
+  outline: .5px solid  #404041 ;
+  /* background-color: #e8f0fe; */
+}
+.trip_button_wrapper{
+  display: flex;
+  justify-content:space-around !important;
+}
+.trip_button{
+  background-color: var(--dark-green);
+  color: #fff;
+  border: 0;
+  border-radius: 5px;
+}
+.trip_button:hover{
+  background-color: var(--light-green);
+  transition: 0.4s ease-in-out;
+}
+.trip_map_div{
+  height: 600px;
+}
 
-/*==================== PORTFOLIO ====================*/
+/*==================== TOURIST ATTRACTION ====================*/
+.attraction{
+  padding: 1rem 0rem 1rem;
+}
+.attraction_data_container{
+  padding: 0rem 3rem;
+}
+.attraction_title{
+  text-align: left;
+  letter-spacing: 0px !important;
+  font-size: var(--attraction-title);
+}
+.attraction_image{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tourist_table_th{
+  padding: 5px 20px !important;
+  background-color: var(--dark-green) !important;
+  border-bottom: 5px solid black !important;
+  color: #fff;
+  letter-spacing: 2px;
+  font-size: var(--navbar-font);
+  text-align: center;
+}
+.tourist_table_tr{
+  text-align: center;
+}
+.tourist_table_tr > td{
+  background-color: #898b8d4D;
+  padding: 10px 20px !important;
+  font-size: var(--navbar-font);
+  color: #404041;
+  border: none !important;
+  border-right: 1.5px solid rgba(126, 125, 125, 0.664) !important;
+  border-bottom: 3px solid rgba(255, 255, 255)!important; 
+}
+.no_border_tr > td{
+  border-bottom: none !important;
+}
+.tourist_table_tr:hover{
+  background-color: #898b8d59;
+  cursor: grab;
+}
+/*==================== CONTACT US ====================*/
+.contact{
+  padding: 2rem 0rem 0rem;
+}
+.contact_title_div{
+  background-color: var(--dark-green);
+}
+.contact_title{
+  letter-spacing: 0px !important;
+  font-size: var(--attraction-title);
+  color: #fff;
+}
+.contact_data_wrapper{
+  padding: 2rem 4rem 1rem;
+}
+.contact_img{
+  width: 35%;
+  transform: translateX(-35%);
+}
+.contact_heading{
+  font-family: MP-semiBold;
+  color: var(--dark-green);
+  font-size: var(--navbar-font);
+}
+.contact_subheading{
+  font-family: MP-semiBold;
+  color: var(--dark-green);
+}
+.contact_description{
+  font-size: var(--description-font);
+  line-height: initial;
+}
+.contact_Phone{
+  margin-top: -5px;
+}
+.office_address{
+  margin-top: -10px;
+}
 
-
-/*==================== PROJECT IN MIND ====================*/
-
-
-/*==================== TESTIMONIAL ====================*/
-
-
-/*==================== CONTACT ME ====================*/
-
+.contact_map_div{
+  height: 100%;
+  filter: grayscale(0.6);  
+}
 
 /*==================== FOOTER ====================*/
-
+.footer{
+  background-color: var(--dark-green);
+  transform: translateY(.4rem);
+  padding: 2rem;
+}
+.footer_data{
+  font-size: var(--samll-font);
+  color: #fff;
+  font-family: MP-regular;
+  letter-spacing: .8px;
+  background-color: var(--light-green) !important;
+  transform: translateY(-.3rem);
+}
+.copy_text{
+  float: left;
+}
+.Power_text{
+  float: right;
+}
 
 /*========== SCROLL UP ==========*/
 
@@ -627,7 +997,7 @@ font-size: var(--slider-date-font);
     min-height: fit-content;
   }
 
-  .navbar-nav {
+  .navbar-nav{
     transform: translateY(50px);
     margin-bottom: 20px;
   }
