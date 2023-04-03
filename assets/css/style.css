@@ -1135,7 +1135,7 @@ thead > tr > th{
   }
   .calander_date{
     font-size: 47pt !important;
-    transform: translateX(-16pt) !important;
+    transform: translateX(-16%) !important;
   }
   .calander_year{
     transform: translateY(-130%) !important;
