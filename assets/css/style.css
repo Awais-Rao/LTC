@@ -133,14 +133,14 @@ img {
 /*==================== HEADER ====================*/
 .header {
   height: max-content;
-  background-image: url("../images/LTC-Slicing-03.jpg");
+  /* background-image: url("../images/LTC-Slicing-03.jpg");
   background-repeat: no-repeat;
   background-size: 100% ;
-  object-fit: cover;
+  object-fit: cover; */
 }
 
 .header_img {
-  visibility: hidden;
+  visibility: visible;
 }
 
 /*==================== NAV ====================*/
@@ -294,6 +294,7 @@ img {
   margin-top: 1rem;
 }
 .about_para{
+  font-size: var(--paragraph-font);
   text-align: justify !important;
   letter-spacing: 0.4px;
 }
@@ -318,6 +319,7 @@ img {
 }
 .light_outline_btn,
 .light_outline_btn:focus{
+  font-size: var(--paragraph-font);
   text-transform: uppercase;
   border-radius: 0;
   border: 2.5px var(--light-green) solid;
@@ -401,8 +403,9 @@ img {
 }
 .support_portion_button,
 .support_portion_button:focus{
+  font-size: var(--paragraph-font);
   position: absolute;
-  bottom: -10%;
+  bottom: -10.5%;
   right: 50%;
   transform: translateX(50%);
   background-color: var(--dark-green);
@@ -981,14 +984,201 @@ thead > tr > th{
 
 
 /*==================== MEDIA QUERIES ====================*/
-/* For small devices */
+
+/* For large devices */
+@media  screen and (max-width:1024px) {
+  :root{
+    /*========== Font and typography ==========*/
+    --navbar-font: 18px;
+    --title-font: 60px;
+    --subtitle-font: 33px;
+    --title-alt-font: 49px;
+    --subtitle-alt-font: 33px;
+    --attraction-title:51px;
+    --heading-font: 21px;
+    --subheading-font: 19px;
+    --card-heading-font: 28px;
+    --card-subheading-font: 23px;
+    --description-font: 14px;
+    --paragraph-font: 16px !important;
+    --samll-font: 15px;
+    --slider-date-font:16pt;
+ }
+
+
+ .about{
+  margin-top: 0px;
+  background-color: peru;
+}
+.about_img{
+  width: 70%;
+}
+.bus_img_wrapper{
+  padding: 0px 3rem !important;
+}
+
+
+.highlight{
+  background-color: aquamarine;
+}
+.calander_date{
+  font-size: 67pt !important;
+  transform: translateX(-20%) !important;
+}
+.calander_year{
+  transform: translateY(-90%) !important;
+}
+.highlight_slider_btn{
+  transform: translateY(-4pt);
+}
+.highlight_slider {
+  margin: 3rem 0 -0rem;
+}
+
+
+}
 
 
 /* For medium devices */
+@media  screen and (max-width:770px) {
+  :root{
+    /*========== Font and typography ==========*/
+    --navbar-font: 18px;
+    --title-font: 58px;
+    --subtitle-font: 31px;
+    --title-alt-font: 49px;
+    --subtitle-alt-font: 33px;
+    --attraction-title:51px;
+    --heading-font: 19px;
+    --subheading-font: 17px;
+    --card-heading-font: 28px;
+    --card-subheading-font: 23px;
+    --description-font: 13px;
+    --paragraph-font: 14px !important;
+    --samll-font: 15px;
+    --slider-date-font:14pt;
+ }
+ 
 
 
-/* For large devices */
+ .about{
+  margin-top: 0px;
+  background-color: yellow !important;
+}
+.about_img{
+  width: 70%;
+}
+.bus_img_wrapper{
+  padding: 0rem 5rem !important;
+}
+
+
+.highlight{
+  padding: 3rem 1rem 3rem;
+}
+.calander_date{
+  font-size: 47pt !important;
+  transform: translateX(-16%) !important;
+}
+.calander_year{
+  transform: translateY(-130%) !important;
+}
+.highlight_slider_btn{
+  transform: translateY(-6pt);
+}
+.highlight_slider {
+  margin: 3rem 0 1rem;
+}
+
+
+
+
+}
+
+
+
+/* For small devices */
+@media  screen and (max-width:706px) {
+  :root{
+     /*========== Font and typography ==========*/
+     --navbar-font: 18px;
+     --title-font: 55px;
+     --subtitle-font: 29px;
+     --title-alt-font: 49px;
+     --subtitle-alt-font: 33px;
+     --attraction-title:51px;
+     --heading-font: 17.5px;
+     --subheading-font: 16px;
+     --card-heading-font: 28px;
+     --card-subheading-font: 23px;
+     --description-font: 11px;
+     --paragraph-font: 12px !important ;
+     --samll-font: 15px;
+     --slider-date-font:12pt; 
+  }
+
+
+  .about{
+    margin-top: 0px;
+    background-color: orange !important;
+  }
+  .about_img{
+    width: 70%;
+  }
+  .bus_img_wrapper{
+    padding: 0px 2rem !important;
+  }
+
+
+  .highlight{
+    padding: 3rem 0rem 3rem;
+  }
+  .calander_date{
+    font-size: 47pt !important;
+    transform: translateX(-16pt) !important;
+  }
+  .calander_year{
+    transform: translateY(-130%) !important;
+  }
+  .highlight_slider_btn{
+    transform: translateY(-6pt);
+  }
+  .highlight_slider {
+    margin: 3rem 0 1rem;
+  }
+
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media screen and (max-width:1200px) {
+
+  /* .about{
+    margin-top: 0px;
+    background-color: yellowgreen;
+  }
+  .about_img{
+    width: 70%;
+  }
+  .bus_img_wrapper{
+    padding: 0px 3rem !important;
+  } */
+
+
   .navbar_img {
     width: 80%;
   }
