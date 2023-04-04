@@ -127,7 +127,7 @@ fourth_btn.addEventListener('click', function(){
 })
 
 
-
 const heightOfNewsCard = document.getElementById('news-wrapper-2').offsetHeight;
  var card = document.querySelectorAll(".news_wrapper");
  card.classList.add("d-none");
+

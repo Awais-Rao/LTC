@@ -35,6 +35,7 @@
 
   /*========== Font and typography ==========*/
   --navbar-font: 18px;
+  --table-font:14px;
   --title-font: 64px;
   --subtitle-font: 35px;
   --title-alt-font: 49px;
@@ -330,11 +331,11 @@ img {
   transition: all 1s;
   overflow: hidden;
 }
-.light_outline_btn:hover {
+.light_outline_btn:hover{
   color: white;
 }
 
-.light_outline_btn::before {
+.light_outline_btn::before{
   content: '';
   position: absolute;
   height: 100%;
@@ -346,9 +347,8 @@ img {
   z-index: -1;
   transition: all 1s;
 }
-
-.light_outline_btn:hover::before {
-  width: 160%;
+.light_outline_btn:hover::before{
+  width: 160% ;
 }
 
 
@@ -679,11 +679,13 @@ transition: all 0.4s;
 .news_card_date{
   font-size: var(--navbar-font);
   color: #009344;
+  margin-top: 18px !important;
 }
 .news_card_title{
   font-size:var(--subheading-font);
   color: var(--dark-green);
   line-height: 100% !important; 
+  margin-top: 5px !important;
 }
 
 .dark_outline_btn,
@@ -738,7 +740,7 @@ thead > tr > th{
 .tender_table_tr > td{
   background-color: #898b8d4D;
   padding: 20px 20px !important;
-  font-size: var(--navbar-font);
+  font-size: var(--table-font);
   color: #221f1f;
   border: none !important;
   border-right: 1.5px solid rgba(126, 125, 125, 0.664) !important;
@@ -835,6 +837,7 @@ thead > tr > th{
 }
 .route_input,
 .location_input{
+  height: 30px;
   flex: 7;
   background-color: #e6e7e8;
   border: 0px;
@@ -851,13 +854,17 @@ thead > tr > th{
   justify-content:space-around !important;
 }
 .trip_button{
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: var(--dark-green);
-  color: #fff;
+  color: #fff !important;
   border: 0;
   border-radius: 5px;
 }
 .trip_button:hover{
-  background-color: var(--light-green);
+  background-color: var(--light-green) !important;
   transition: 0.4s ease-in-out;
 }
 .trip_map_div{
@@ -876,7 +883,7 @@ thead > tr > th{
   letter-spacing: 0px !important;
   font-size: var(--attraction-title);
 }
-.attraction_image{
+.attraction_image_div{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -912,6 +919,7 @@ thead > tr > th{
 /*==================== CONTACT US ====================*/
 .contact{
   padding: 2rem 0rem 0rem;
+  margin: 0;
 }
 .contact_title_div{
   background-color: var(--dark-green);
@@ -990,6 +998,7 @@ thead > tr > th{
   :root{
     /*========== Font and typography ==========*/
     --navbar-font: 18px;
+    --table-font:14px;
     --title-font: 60px;
     --subtitle-font: 33px;
     --title-alt-font: 49px;
@@ -997,18 +1006,17 @@ thead > tr > th{
     --attraction-title:51px;
     --heading-font: 21px;
     --subheading-font: 19px;
-    --card-heading-font: 28px;
-    --card-subheading-font: 23px;
+    --card-heading-font: 26px;
+    --card-subheading-font: 21px;
     --description-font: 14px;
     --paragraph-font: 16px !important;
-    --samll-font: 15px;
+    --samll-font: 14px;
     --slider-date-font:16pt;
  }
 
 
  .about{
   margin-top: 0px;
-  background-color: peru;
 }
 .about_img{
   width: 70%;
@@ -1018,9 +1026,6 @@ thead > tr > th{
 }
 
 
-.highlight{
-  background-color: aquamarine;
-}
 .calander_date{
   font-size: 67pt !important;
   transform: translateX(-20%) !important;
@@ -1034,9 +1039,40 @@ thead > tr > th{
 .highlight_slider {
   margin: 3rem 0 -0rem;
 }
+  
+.team{
+  padding: .5rem;
+}
+.team_member_card_data_inner{
+  width: 55% !important;
+  padding: 0.5rem;
+}
+.team_member_card_description{
+  padding: 0px 7px;
+  margin-top: 5px;
+  text-align: justify;
+}
+.team_member_card_button{
+  background-color: transparent !important;
+  transform: translate(17px,8px);
+}
+.team_member_portion{
+  padding: 0rem 3rem;
+}
+.team_section_data_wrapper{
+  margin: 2.5rem 0rem;
+}
+.team_member_card_wrapper{
+  transform: translateX(20px);
+}
+
+
+
 
 
 }
+
+
 
 
 /* For medium devices */
@@ -1044,6 +1080,7 @@ thead > tr > th{
   :root{
     /*========== Font and typography ==========*/
     --navbar-font: 18px;
+    --table-font:14px;
     --title-font: 58px;
     --subtitle-font: 31px;
     --title-alt-font: 49px;
@@ -1051,11 +1088,11 @@ thead > tr > th{
     --attraction-title:51px;
     --heading-font: 19px;
     --subheading-font: 17px;
-    --card-heading-font: 28px;
-    --card-subheading-font: 23px;
+    --card-heading-font: 24px;
+    --card-subheading-font: 19px;
     --description-font: 13px;
     --paragraph-font: 14px !important;
-    --samll-font: 15px;
+    --samll-font: 12px;
     --slider-date-font:14pt;
  }
  
@@ -1063,7 +1100,6 @@ thead > tr > th{
 
  .about{
   margin-top: 0px;
-  background-color: yellow !important;
 }
 .about_img{
   width: 70%;
@@ -1089,8 +1125,32 @@ thead > tr > th{
 .highlight_slider {
   margin: 3rem 0 1rem;
 }
-
-
+  
+.team{
+  padding: .5rem;
+}
+.team_member_card_data_inner{
+  width: 55% !important;
+  padding: 0.5rem;
+}
+.team_member_card_description{
+  padding: 0px 7px;
+  margin-top: 5px;
+  text-align: justify;
+}
+.team_member_card_button{
+  background-color: transparent !important;
+  transform: translate(17px,8px);
+}
+.team_member_portion{
+  padding: 0rem 3rem;
+}
+.team_section_data_wrapper{
+  margin: 2.5rem 0rem;
+}
+.team_member_card_wrapper{
+  transform: translateX(20px);
+}
 
 
 }
@@ -1101,26 +1161,30 @@ thead > tr > th{
 @media  screen and (max-width:706px) {
   :root{
      /*========== Font and typography ==========*/
-     --navbar-font: 18px;
-     --title-font: 55px;
+     --navbar-font: 14px;
+     --table-font:12px;
+     --title-font: 45px;
      --subtitle-font: 29px;
-     --title-alt-font: 49px;
-     --subtitle-alt-font: 33px;
-     --attraction-title:51px;
+     --title-alt-font: 35px;
+     --subtitle-alt-font: 20px;
+     --attraction-title:38px;
      --heading-font: 17.5px;
      --subheading-font: 16px;
-     --card-heading-font: 28px;
-     --card-subheading-font: 23px;
+     --card-heading-font: 22px;
+     --card-subheading-font: 17px;
      --description-font: 11px;
      --paragraph-font: 12px !important ;
-     --samll-font: 15px;
+     --samll-font: 10px;
      --slider-date-font:12pt; 
   }
 
+  .section_title{
+    letter-spacing: 0.5px;
+  }
 
   .about{
     margin-top: 0px;
-    background-color: orange !important;
+    padding: 2rem 1rem 2rem;
   }
   .about_img{
     width: 70%;
@@ -1135,7 +1199,7 @@ thead > tr > th{
   }
   .calander_date{
     font-size: 47pt !important;
-    transform: translateX(-16%) !important;
+    transform: translateX(-20%) !important;
   }
   .calander_year{
     transform: translateY(-130%) !important;
@@ -1147,12 +1211,345 @@ thead > tr > th{
     margin: 3rem 0 1rem;
   }
 
+  
+  .team{
+    padding: .5rem;
+  }
+  .team_member_card_data_inner{
+    width: 55% !important;
+    padding: 0.5rem;
+  }
+  .team_member_card_description{
+    padding: 0px 7px;
+    margin-top: 5px;
+    text-align: justify;
+  }
+  .team_member_card_button{
+    background-color: transparent !important;
+    transform: translate(17px,8px);
+  }
+  .team_member_portion{
+    padding: 0rem 3rem;
+  }
+  .team_section_data_wrapper{
+    margin: 2.5rem 0rem;
+  }
+  .team_member_card_wrapper{
+    transform: translateX(20px);
+  }
+  .team_member_card_arrow{
+    width: 50%;
+  }
+
+
+
+  .news{
+    padding: 1.5rem 1rem;
+  }
+  .news_wrapper{
+    margin-top: .5rem;
+  }
+  .news_img{
+    width: 95%;
+    transform: translateX(-18%);
+  }
+  .news_card_date{
+    margin-top: 10px !important;
+  }
+  .news_card_title{
+    margin-top: 5px !important;
+  }
+  
+
+
+  .tenders{
+    padding: 1.5rem 0rem;
+  }
+  thead > tr > th{
+    padding: 5px 5px !important;
+    border-top: 2px solid var(--dark-green);
+  }
+  .tender_table_tr > td{
+    padding: 5px 5px !important;
+    text-align: center;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5)!important; 
+  }
+
+
+  .help_img_wrapper{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  .help_img_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0rem 2rem !important;
+  }
+  .help_container{
+    padding: 5rem 3rem ;
+  }
+  .help_data{
+    text-align: center;
+    transform: translateX(0px);
+  }
+  .help_heading{
+
+  }
+
+
+
+  .location_input,
+  .route_input,
+  .trip_button{
+    height: 20px;
+  }
+  .trip_button_wrapper{
+    margin-top: 10px;
+  }
+  .trip_button{
+  font-size: var(--samll-font);
+  }
+  .trip_map_div{
+    height: 300px;
+  }
+
+
+  .attraction_img{
+    width: 50% !important;
+  }
+  .attraction_title{
+    text-align: center;
+  }
+  .attraction_data_container{
+    padding: 0rem 1rem;
+  }
+  .attraction_image_div{
+    display: block;
+  }
+  .tourist_table_th{
+    padding: 5px 20px !important;
+    border-bottom: 3px solid black !important;
+  }
+  .tourist_table_tr > td{
+    padding: 10px 10px !important;
+    border-bottom: 2px solid rgba(255, 255, 255)!important; 
+  }
+
+
+
+
+  .contact_data_wrapper{
+    padding: 2rem 4rem 1rem 2rem;
+  }
+  .contact_img{
+    width: 35%;
+  transform: translateX(-90%);
+  }
+  .contact_map_div{
+    height: 300px;
+  }
+
 
   }
 
 
 
 
+
+
+/* For Mobiles */
+@media  screen and (max-width:450px) {
+  :root{
+    /*========== Font and typography ==========*/
+    --navbar-font: 14px;
+    --table-font:12px;
+    --title-font: 45px;
+    --subtitle-font: 29px;
+    --title-alt-font: 35px;
+    --subtitle-alt-font: 20px;
+    --attraction-title:38px;
+    --heading-font: 17.5px;
+    --subheading-font: 16px;
+    --card-heading-font: 22px;
+    --card-subheading-font: 17px;
+    --description-font: 11px;
+    --paragraph-font: 13px !important ;
+    --samll-font: 11px;
+    --slider-date-font:12pt; 
+ }
+
+ .section_title{
+   letter-spacing: 0.5px;
+ }
+
+ .about{
+   margin-top: 0px;
+   padding: 2rem 1rem 2rem;
+ }
+ .about_img{
+   width: 70%;
+ }
+ .bus_img_wrapper{
+   padding: 0px 2rem !important;
+ }
+
+
+ .highlight{
+   padding: 3rem 0rem 3rem;
+ }
+ .calander_date{
+   font-size: 47pt !important;
+   transform: translateX(-20%) !important;
+ }
+ .calander_year{
+   transform: translateY(-130%) !important;
+ }
+ .highlight_slider_btn{
+   transform: translateY(-6pt);
+ }
+ .highlight_slider {
+   margin: 3rem 0 1rem;
+ }
+
+ 
+ .team{
+   padding: .5rem;
+ }
+ .team_member_card_data_inner{
+   width: 55% !important;
+   padding: 0.5rem;
+ }
+ .team_member_card_description{
+   padding: 0px 7px;
+   margin-top: 5px;
+   text-align: justify;
+ }
+ .team_member_card_button{
+   background-color: transparent !important;
+   transform: translate(17px,8px);
+ }
+ .team_member_portion{
+   padding: 0rem 3rem;
+ }
+ .team_section_data_wrapper{
+   margin: 2.5rem 0rem;
+ }
+ .team_member_card_wrapper{
+   transform: translateX(20px);
+ }
+ .team_member_card_arrow{
+   width: 50%;
+ }
+
+
+
+ .news{
+   padding: 1.5rem 1rem;
+ }
+ .news_wrapper{
+   margin-top: .5rem;
+ }
+ .news_img{
+   width: 95%;
+   transform: translateX(-18%);
+ }
+ .news_card_date{
+   margin-top: 10px !important;
+ }
+ .news_card_title{
+   margin-top: 5px !important;
+ }
+ 
+
+
+ .tenders{
+   padding: 1.5rem 0rem;
+ }
+ thead > tr > th{
+   padding: 5px 5px !important;
+   border-top: 2px solid var(--dark-green);
+ }
+ .tender_table_tr > td{
+   padding: 5px 5px !important;
+   text-align: center;
+   border-bottom: 2px solid rgba(255, 255, 255, 0.5)!important; 
+ }
+
+
+ .help_img_wrapper{
+   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+ }
+ .help_img_container{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: 2rem 0rem 2rem !important;
+ }
+ .help_container{
+   padding: 5rem 3rem ;
+ }
+ .help_data{
+   text-align: center;
+   transform: translateX(0px);
+ }
+ .help_heading{
+
+ }
+
+
+
+ .location_input,
+ .route_input,
+ .trip_button{
+   height: 20px;
+ }
+ .trip_button_wrapper{
+   margin-top: 10px;
+ }
+ .trip_button{
+ font-size: var(--samll-font);
+ }
+ .trip_map_div{
+   height: 300px;
+ }
+
+
+ .attraction_img{
+   width: 50% !important;
+ }
+ .attraction_title{
+   text-align: center;
+ }
+ .attraction_data_container{
+   padding: 0rem 1rem;
+ }
+ .attraction_image_div{
+   display: block;
+ }
+ .tourist_table_th{
+   padding: 5px 20px !important;
+   border-bottom: 3px solid black !important;
+ }
+ .tourist_table_tr > td{
+   padding: 10px 10px !important;
+   border-bottom: 2px solid rgba(255, 255, 255)!important; 
+ }
+
+
+
+
+ .contact_data_wrapper{
+   padding: 2rem 4rem 1rem 2rem;
+ }
+ .contact_img{
+   width: 35%;
+ transform: translateX(-90%);
+ }
+ .contact_map_div{
+   height: 300px;
+ }
+
+  }
 
 
 
