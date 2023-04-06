@@ -1361,51 +1361,82 @@ thead > tr > th{
 @media  screen and (max-width:450px) {
   :root{
     /*========== Font and typography ==========*/
-    --navbar-font: 14px;
-    --table-font:12px;
-    --title-font: 45px;
-    --subtitle-font: 29px;
-    --title-alt-font: 35px;
-    --subtitle-alt-font: 20px;
-    --attraction-title:38px;
+    --navbar-font: 10px;
+    --table-font:9px;
+    --title-font: 38px;
+    --subtitle-font: 25px;
+    --title-alt-font: 25px;
+    --subtitle-alt-font: 18px;
+    --attraction-title:32px;
     --heading-font: 17.5px;
-    --subheading-font: 16px;
-    --card-heading-font: 22px;
-    --card-subheading-font: 17px;
-    --description-font: 11px;
+    --subheading-font: 13px;
+    --card-heading-font: 16px;
+    --card-subheading-font: 13px;
+    --card-description-font: 9px;
+    --description-font: 9.8px;
     --paragraph-font: 13px !important ;
-    --samll-font: 11px;
-    --slider-date-font:12pt; 
+    --samll-font: 8px;
+    --slider-date-font:10pt; 
  }
+
+
+ /*========== Margines ==========*/
+ .margin-x-sm{height: 3vh;}
+ .margin-sm{height: 5vh;}
+ .margin-x-md{height: 8vh;}
+ .margin-md{height: 11vh;}
+ .margin-x-xl{height: 19vh;}
+ .margin-xl{height: 24vh;}
+
+
+
+
+
+
 
  .section_title{
    letter-spacing: 0.5px;
+ }
+ .section_subtitle{
+  letter-spacing: .3rem;
  }
 
  .about{
    margin-top: 0px;
    padding: 2rem 1rem 2rem;
  }
+ .about_btn{
+  margin-top: 8px;
+  border: 2px solid var(--light-green);
+ }
  .about_img{
-   width: 70%;
+   width: 80%;
+   margin: 2rem 0rem;
  }
  .bus_img_wrapper{
    padding: 0px 2rem !important;
+ }
+
+ .support_portion_button{
+  bottom: -19pt;
  }
 
 
  .highlight{
    padding: 3rem 0rem 3rem;
  }
+ .highlight_slider_calander{
+  transform: translateY(-23pt);
+ }
  .calander_date{
    font-size: 47pt !important;
-   transform: translateX(-20%) !important;
+   transform: translateX(-20pt) !important;
  }
  .calander_year{
-   transform: translateY(-130%) !important;
+   transform: translateY(-130%) translateX(-10pt) !important;
  }
  .highlight_slider_btn{
-   transform: translateY(-6pt);
+   transform: translateY(-9pt);
  }
  .highlight_slider {
    margin: 3rem 0 1rem;
@@ -1416,23 +1447,29 @@ thead > tr > th{
    padding: .5rem;
  }
  .team_member_card_data_inner{
-   width: 55% !important;
+   width: 58% !important;
    padding: 0.5rem;
  }
+ .team_member_card_data_inner{
+  top: 5%;
+  left: 40%;
+  padding-bottom: 0;
+ }
  .team_member_card_description{
+  font-size: var(--card-description-font);
    padding: 0px 7px;
    margin-top: 5px;
    text-align: justify;
  }
  .team_member_card_button{
    background-color: transparent !important;
-   transform: translate(17px,8px);
+   transform: translate(17px,0px);
  }
  .team_member_portion{
    padding: 0rem 3rem;
  }
  .team_section_data_wrapper{
-   margin: 2.5rem 0rem;
+   margin: 2.5rem 0rem 3.5rem;
  }
  .team_member_card_wrapper{
    transform: translateX(20px);
@@ -1454,10 +1491,10 @@ thead > tr > th{
    transform: translateX(-18%);
  }
  .news_card_date{
-   margin-top: 10px !important;
+   margin-top: 7px !important;
  }
  .news_card_title{
-   margin-top: 5px !important;
+   margin-top: 3.5px !important;
  }
  
 
@@ -1476,6 +1513,9 @@ thead > tr > th{
  }
 
 
+ .help_subheading{
+  line-height: initial;
+ }
  .help_img_wrapper{
    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
  }
@@ -1499,15 +1539,20 @@ thead > tr > th{
 
 
  .location_input,
- .route_input,
- .trip_button{
+ .route_input{
    height: 20px;
  }
- .trip_button_wrapper{
+ .trip_button_wrapper,
+ .location_wrapper{
    margin-top: 10px;
+   margin-right: 10px;
+ }
+ .trip_button:nth-child(1){
+  margin-right: 10px;
  }
  .trip_button{
  font-size: var(--samll-font);
+ height: 20px;
  }
  .trip_map_div{
    height: 300px;
@@ -1549,7 +1594,18 @@ thead > tr > th{
    height: 300px;
  }
 
-  }
+
+
+ .footer{
+  text-align: center !important;
+  padding: 1.3rem 0rem 1.3rem;
+}
+.copy_text{
+  margin-left: 15% !important;
+}
+
+
+}
 
 
 
