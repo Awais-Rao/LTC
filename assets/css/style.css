@@ -1871,8 +1871,11 @@ transform: translateX(-90%);
    font-size: 47pt !important;
    transform: translateX(-20pt) !important;
  }
+ .calander_month{
+  transform: translateY(-20%) !important;
+ }
  .calander_year{
-   transform: translateY(-130%) translateX(-10pt) !important;
+   transform: translateY(-150%) translateX(-10pt) !important;
  }
  .highlight_slider_btn{
    transform: translateY(-9pt);
