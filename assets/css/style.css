@@ -1557,10 +1557,12 @@ transform: translateX(-90%);
     letter-spacing: 0.5px;
   }
 
+  .navbar_img{
+    width: 65% !important;
+  }
   .about{
     margin-top: 0px;
     padding: 2rem 1rem 2rem;
-    background-color: purple;
   }
   .about_img{
     width: 70%;
