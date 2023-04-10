@@ -1,3 +1,7 @@
+// alert("width");
+// var w = window.innerWidth;
+// alert(w);
+
 const sideBar = document.getElementById('sub_navbar');
 const sideBar_button = window.getComputedStyle(sideBar, '::after');
 
@@ -130,4 +134,5 @@ fourth_btn.addEventListener('click', function(){
 const heightOfNewsCard = document.getElementById('news-wrapper-2').offsetHeight;
  var card = document.querySelectorAll(".news_wrapper");
  card.classList.add("d-none");
+
 

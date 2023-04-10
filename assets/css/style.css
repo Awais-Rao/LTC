@@ -35,7 +35,7 @@
 
   /*========== Font and typography ==========*/
   --navbar-font: 18px;
-  --table-font:14px;
+  --table-font:18px;
   --title-font: 64px;
   --subtitle-font: 35px;
   --title-alt-font: 49px;
@@ -157,7 +157,6 @@ img {
 
 .navbar {
   background-color: var(--dark-green);
-  opacity: 90%;
   overflow: hidden;
   /* min-height: 116px; */
 }
@@ -165,7 +164,6 @@ img {
 .offcanvas {
   background-color: var(--dark-green);
   min-width: 80% !important;
-  opacity: 90% !important;
 }
 .offcanvas.show:not(.hiding), 
 .offcanvas.showing {
@@ -191,10 +189,27 @@ img {
   text-align: center;
 }
 
+.dropdown-menu{
+  background-color: #009344;
+  outline: 0 !important;
+  border:0;
+
+}
+
 .nav-link,
 .nav-link:focus,
-.nav-link:hover {
-  color: #fff;
+.nav-link:hover,
+.nav-link:active,
+.dropdown-toggle{
+  color: #fff !important;
+}
+.dropdown-item,
+.dropdown-item:hover{
+  color: var(--light-green);
+}
+.dropdown,
+.dropdown-menu{
+  text-align: center;
 }
 
 .nav-item::after {
@@ -994,10 +1009,10 @@ thead > tr > th{
 /*==================== MEDIA QUERIES ====================*/
 
 /* For large devices */
-@media  screen and (max-width:1024px) {
+@media  screen and (max-width:1300px) {
   :root{
     /*========== Font and typography ==========*/
-    --navbar-font: 18px;
+    --navbar-font: 16px;
     --table-font:14px;
     --title-font: 60px;
     --subtitle-font: 33px;
@@ -1008,6 +1023,61 @@ thead > tr > th{
     --subheading-font: 19px;
     --card-heading-font: 26px;
     --card-subheading-font: 21px;
+    --card-description-font:14px;
+    --description-font: 14px;
+    --paragraph-font: 16px !important;
+    --samll-font: 14px;
+    --slider-date-font:16pt;
+ }
+
+
+ .calander_date{
+  font-size: 80pt;
+ }
+ 
+
+.team_member_card_data_inner{
+  width: 60%;
+  padding: .5rem;
+}
+.team_member_card_data_inner{
+ top: 15%;
+ left: 40%;
+ padding-bottom: 0;
+}
+.team_member_card_description{
+ font-size: var(--card-description-font);
+  padding: 0px 7px;
+  margin-top: 5px;
+  text-align: justify;
+}
+.team_member_card_button{
+  background-color: transparent !important;
+  transform: translate(9px,0px);
+}
+
+
+
+
+
+}
+
+/* For large devices */
+@media  screen and (max-width:1024px) {
+  :root{
+    /*========== Font and typography ==========*/
+    --navbar-font: 16px;
+    --table-font:14px;
+    --title-font: 60px;
+    --subtitle-font: 33px;
+    --title-alt-font: 49px;
+    --subtitle-alt-font: 33px;
+    --attraction-title:51px;
+    --heading-font: 21px;
+    --subheading-font: 15px;
+    --card-heading-font: 26px;
+    --card-subheading-font: 21px;
+    --card-description-font:14px;
     --description-font: 14px;
     --paragraph-font: 16px !important;
     --samll-font: 14px;
@@ -1039,32 +1109,163 @@ thead > tr > th{
 .highlight_slider {
   margin: 3rem 0 -0rem;
 }
+.calander_date{
+  transform: translateX(0%) !important;
+}
   
 .team{
   padding: .5rem;
+  overflow: hidden;
+}
+.team_member_name{
+  font-size: 13px;
+}
+
+
+.team_member_card_data_inner{
+  width: 50%;
+  padding: 1rem;
 }
 .team_member_card_data_inner{
-  width: 55% !important;
-  padding: 0.5rem;
+ top: 15%;
+ left: 40%;
+ padding-bottom: 0;
 }
 .team_member_card_description{
+ font-size: var(--card-description-font);
   padding: 0px 7px;
   margin-top: 5px;
   text-align: justify;
 }
 .team_member_card_button{
   background-color: transparent !important;
-  transform: translate(17px,8px);
+  transform: translate(17px,0px);
 }
 .team_member_portion{
   padding: 0rem 3rem;
 }
 .team_section_data_wrapper{
-  margin: 2.5rem 0rem;
+  margin: 2.5rem 0rem 3.5rem;
 }
 .team_member_card_wrapper{
   transform: translateX(20px);
 }
+.team_member_card_arrow{
+  width: 50%;
+}
+
+
+
+.news{
+  padding: 1.5rem 1rem;
+}
+.news_wrapper{
+  margin-top: .5rem;
+}
+.news_img{
+  width: 50%;
+  transform: translateX(-18%);
+}
+.news_card_date{
+  margin-top: 20px ;
+}
+.news_card_title{
+  margin-top: 5px;
+}
+
+
+
+.tenders{
+  padding: 1.5rem 0rem;
+}
+thead > tr > th{
+  padding: 15px 15px !important;
+  border-top: 2px solid var(--dark-green);
+}
+.tender_table_tr > td{
+  padding: 15px 15px !important;
+  text-align: center;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5)!important; 
+}
+
+
+.help_img_wrapper{
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+.help_img_container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0rem 2rem !important;
+}
+.help_container{
+  padding: 5rem 3rem ;
+}
+.help_data{
+  text-align: center;
+  transform: translateX(0px);
+}
+
+
+
+.location_input,
+.route_input,
+.trip_button{
+  height: 20px;
+}
+.trip_map_div{
+  height: 450px;
+}
+
+
+.location_input,
+.route_input{
+  height: 20px;
+}
+.location_wrapper{
+  margin-top: 10px;
+  margin-right: 10px;
+}
+.trip_button_wrapper{
+  display: none;
+  /* ======== displayed None ============ */
+}
+
+
+
+
+.attraction_img{
+  top: 50%;
+}
+.attraction_title{
+  text-align: center;
+}
+.attraction_data_container{
+  padding: 0rem 1rem;
+}
+.attraction_image_div{
+  display: block;
+}
+.tourist_table_th{
+  padding: 5px 20px !important;
+  border-bottom: 3px solid black !important;
+}
+.tourist_table_tr > td{
+  padding: 10px 10px !important;
+  border-bottom: 2px solid rgba(255, 255, 255)!important; 
+}
+
+
+
+
+.contact_data_wrapper{
+  padding: 2rem 4rem 1rem 2rem;
+}
+.contact_img{
+  width: 35%;
+transform: translateX(-90%);
+}
+
 
 
 
@@ -1079,20 +1280,21 @@ thead > tr > th{
 @media  screen and (max-width:770px) {
   :root{
     /*========== Font and typography ==========*/
-    --navbar-font: 18px;
+    --navbar-font: 16px;
     --table-font:14px;
     --title-font: 58px;
     --subtitle-font: 31px;
-    --title-alt-font: 49px;
+    --title-alt-font: 45px;
     --subtitle-alt-font: 33px;
     --attraction-title:51px;
     --heading-font: 19px;
     --subheading-font: 17px;
     --card-heading-font: 24px;
     --card-subheading-font: 19px;
+    --card-description-font: 13px;
     --description-font: 13px;
-    --paragraph-font: 14px !important;
-    --samll-font: 12px;
+    --paragraph-font: 15px !important;
+    --samll-font: 13px;
     --slider-date-font:14pt;
  }
  
@@ -1100,6 +1302,9 @@ thead > tr > th{
 
  .about{
   margin-top: 0px;
+}
+.about_btn{
+  margin-top: 10px;
 }
 .about_img{
   width: 70%;
@@ -1151,6 +1356,175 @@ thead > tr > th{
 .team_member_card_wrapper{
   transform: translateX(20px);
 }
+.team_member_card_arrow{
+  width: 50%;
+}
+
+
+.team_member_card_data_inner{
+  width: 50%;
+  padding: 1rem;
+}
+.team_member_card_data_inner{
+ top: 15%;
+ left: 40%;
+ padding-bottom: 0;
+}
+.team_member_card_description{
+ font-size: var(--card-description-font);
+  padding: 0px 7px;
+  margin-top: 5px;
+  text-align: justify;
+}
+.team_member_card_button{
+  background-color: transparent !important;
+  transform: translate(17px,0px);
+}
+.team_member_portion{
+  padding: 0rem 3rem;
+}
+.team_section_data_wrapper{
+  margin: 2.5rem 0rem 3.5rem;
+}
+.team_member_card_wrapper{
+  transform: translateX(20px);
+}
+.team_member_card_arrow{
+  width: 80%;
+}
+
+
+
+.news{
+  padding: 1.5rem 1rem;
+}
+.news_wrapper{
+  margin-top: .5rem;
+}
+.news_img{
+  width: 50%;
+  transform: translateX(-18%);
+}
+.news_card_date{
+  margin-top: 20px ;
+}
+.news_card_title{
+  margin-top: 5px;
+}
+
+
+
+.tenders{
+  padding: 1.5rem 0rem;
+}
+thead > tr > th{
+  padding: 10px 10px !important;
+  border-top: 2px solid var(--dark-green);
+}
+.tender_table_tr > td{
+  padding: 10px 10px !important;
+  text-align: center;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5)!important; 
+}
+
+
+.help_img_wrapper{
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+.help_img_container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0rem 2rem !important;
+}
+.help_container{
+  padding: 5rem 3rem ;
+}
+.help_data{
+  text-align: center;
+  transform: translateX(0px);
+}
+
+
+
+.location_input,
+.route_input,
+.trip_button{
+  height: 20px;
+}
+.trip_button_wrapper{
+  margin-top: 10px;
+}
+.trip_button{
+font-size: var(--samll-font);
+}
+.trip_map_div{
+  height: 300px;
+}
+
+
+.location_input,
+.route_input{
+  height: 20px;
+}
+.trip_button_wrapper,
+.location_wrapper{
+  margin-top: 10px;
+  margin-right: 10px;
+}
+.trip_button_wrapper{
+  display: none;
+  /* ======== displayed None ============ */
+  padding-left:8rem;
+  padding-right: 15%;
+  margin-right: 10px;
+}
+.trip_button:nth-child(1){
+ margin-right: 10px !important;
+}
+.trip_button{
+font-size: var(--samll-font);
+height: 20px;
+}
+
+
+
+
+.attraction_img{
+  width: 50% !important;
+}
+.attraction_title{
+  text-align: center;
+}
+.attraction_data_container{
+  padding: 0rem 1rem;
+}
+.attraction_image_div{
+  display: block;
+}
+.tourist_table_th{
+  padding: 5px 20px !important;
+  border-bottom: 3px solid black !important;
+}
+.tourist_table_tr > td{
+  padding: 10px 10px !important;
+  border-bottom: 2px solid rgba(255, 255, 255)!important; 
+}
+
+
+
+
+.contact_data_wrapper{
+  padding: 2rem 4rem 1rem 2rem;
+}
+.contact_img{
+  width: 35%;
+transform: translateX(-90%);
+}
+/* .contact_map_div{
+  height: 300px;
+} */
+
 
 
 }
@@ -1160,22 +1534,23 @@ thead > tr > th{
 /* For small devices */
 @media  screen and (max-width:706px) {
   :root{
-     /*========== Font and typography ==========*/
-     --navbar-font: 14px;
-     --table-font:12px;
-     --title-font: 45px;
-     --subtitle-font: 29px;
-     --title-alt-font: 35px;
-     --subtitle-alt-font: 20px;
-     --attraction-title:38px;
-     --heading-font: 17.5px;
-     --subheading-font: 16px;
-     --card-heading-font: 22px;
-     --card-subheading-font: 17px;
-     --description-font: 11px;
-     --paragraph-font: 12px !important ;
-     --samll-font: 10px;
-     --slider-date-font:12pt; 
+    /*========== Font and typography ==========*/
+    --navbar-font: 12px;
+    --table-font:14px;
+    --title-font: 41px;
+    --subtitle-font: 25px;
+    --title-alt-font: 32px;
+    --subtitle-alt-font: 22px;
+    --attraction-title:36px;
+    --heading-font: 20px;
+    --subheading-font: 16px;
+    --card-heading-font: 20px;
+    --card-subheading-font: 16px;
+    --card-description-font: 12px;
+    --description-font: 12px;
+    --paragraph-font: 15px !important ;
+    --samll-font: 12px;
+    --slider-date-font:13pt; 
   }
 
   .section_title{
@@ -1185,6 +1560,7 @@ thead > tr > th{
   .about{
     margin-top: 0px;
     padding: 2rem 1rem 2rem;
+    background-color: purple;
   }
   .about_img{
     width: 70%;
@@ -1197,12 +1573,15 @@ thead > tr > th{
   .highlight{
     padding: 3rem 0rem 3rem;
   }
+  .highlight_slider_calander{
+    transform: translateY( -1.5rem);
+  }
   .calander_date{
-    font-size: 47pt !important;
-    transform: translateX(-20%) !important;
+    font-size: 54pt !important;
+    transform: translateX(-1rem) !important;
   }
   .calander_year{
-    transform: translateY(-130%) !important;
+    transform: translateY(-120%) !important;
   }
   .highlight_slider_btn{
     transform: translateY(-6pt);
@@ -1214,6 +1593,7 @@ thead > tr > th{
   
   .team{
     padding: .5rem;
+    overflow: hidden;
   }
   .team_member_card_data_inner{
     width: 55% !important;
@@ -1242,6 +1622,39 @@ thead > tr > th{
   }
 
 
+  .team_member_card_data_inner{
+    width: 50%;
+    padding: 0.5rem;
+  }
+  .team_member_card_data_inner{
+   top: 15%;
+   left: 40%;
+   padding-bottom: 0;
+  }
+  .team_member_card_description{
+   font-size: var(--card-description-font);
+    padding: 0px 7px;
+    margin-top: 5px;
+    text-align: justify;
+  }
+  .team_member_card_button{
+    background-color: transparent !important;
+    transform: translate(17px,0px);
+  }
+  .team_member_portion{
+    padding: 0rem 3rem;
+  }
+  .team_section_data_wrapper{
+    margin: 2.5rem 0rem 3.5rem;
+  }
+  .team_member_card_wrapper{
+    transform: translateX(20px);
+  }
+  .team_member_card_arrow{
+    width: 50%;
+  }
+ 
+
 
   .news{
     padding: 1.5rem 1rem;
@@ -1250,14 +1663,14 @@ thead > tr > th{
     margin-top: .5rem;
   }
   .news_img{
-    width: 95%;
+    width: 50%;
     transform: translateX(-18%);
   }
   .news_card_date{
-    margin-top: 10px !important;
+    margin-top: 20px ;
   }
   .news_card_title{
-    margin-top: 5px !important;
+    margin-top: 5px;
   }
   
 
@@ -1292,9 +1705,6 @@ thead > tr > th{
     text-align: center;
     transform: translateX(0px);
   }
-  .help_heading{
-
-  }
 
 
 
@@ -1312,6 +1722,33 @@ thead > tr > th{
   .trip_map_div{
     height: 300px;
   }
+
+
+  .location_input,
+  .route_input{
+    height: 20px;
+  }
+  .trip_button_wrapper,
+  .location_wrapper{
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+  .trip_button_wrapper{
+    display: none;
+    /* ======== displayed None ============ */
+    padding-left:8rem;
+    padding-right: 15%;
+    margin-right: 10px;
+  }
+  .trip_button:nth-child(1){
+   margin-right: 10px !important;
+  }
+  .trip_button{
+  font-size: var(--samll-font);
+  height: 20px;
+  }
+
+
 
 
   .attraction_img{
