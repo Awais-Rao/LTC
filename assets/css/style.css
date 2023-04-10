@@ -1576,7 +1576,7 @@ transform: translateX(-90%);
     padding: 3rem 0rem 3rem;
   }
   .highlight_slider_calander{
-    transform: translateY( -1rem);
+    transform: translateY( -1.5rem);
   }
   .calander_date{
     font-size: 54pt !important;
@@ -1865,7 +1865,7 @@ transform: translateX(-90%);
    padding: 3rem 0rem 3rem;
  }
  .highlight_slider_calander{
-  transform: translateY(-23pt);
+  transform: translateY(-19pt);
  }
  .calander_date{
    font-size: 47pt !important;
